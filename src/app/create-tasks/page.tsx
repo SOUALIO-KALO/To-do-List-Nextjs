@@ -26,7 +26,6 @@ const createPage = () => {
       todos.push(newTodo);
 
       saveTodo(todos);
-      console.log(newTodo);
       setTitle("");
     }
   };

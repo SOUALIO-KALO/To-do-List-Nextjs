@@ -16,7 +16,7 @@ import { ArrowLeftToLine } from "lucide-react";
 import { useParams, useRouter } from "next/navigation";
 import { FormEvent, useEffect, useState } from "react";
 
-const UpdateTasksPage = () => {
+const UpdateTodosPage = () => {
   const [title, setTitle] = useState<string | undefined>("");
   const [todos, setTodos] = useState<ITodo[]>([]);
   const [status, setStatus] = useState<string | undefined>("");
@@ -25,9 +25,11 @@ const UpdateTasksPage = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    const tasks = getTodos();
-    setTodos(tasks);
-    const todo = tasks.find((t) => parseInt(t.id) === parseInt(id as string));
+    const todoStored = getTodos();
+    setTodos(todoStored);
+    const todo = todoStored.find(
+      (t) => parseInt(t.id) === parseInt(id as string)
+    );
     setStatus(todo?.status);
     setTitle(todo?.title);
     setIsLoading(false);
@@ -48,7 +50,6 @@ const UpdateTasksPage = () => {
     setStatus(value);
   };
 
-  console.log(status);
   if (isLoading) {
     return <div>Chargement...</div>;
   }
@@ -89,4 +90,4 @@ const UpdateTasksPage = () => {
   );
 };
 
-export default UpdateTasksPage;
+export default UpdateTodosPage;
