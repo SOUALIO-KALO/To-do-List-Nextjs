@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Lien de ploiement
 
-Cliquez [ici](https://to-do-list-rust-six-67.vercel.app/) pour visualier le projet en ligne
+Cliquez [ici](https://to-do-list-nextjs-ten.vercel.app/) pour visualier le projet en ligne
 
 ## Getting Started
 
