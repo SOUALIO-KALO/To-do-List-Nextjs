@@ -81,7 +81,7 @@ const TaskList = () => {
         <TableBody>
           {filteredTodos.map((todo) => (
             <TableRow key={todo.id}>
-              <TableCell className="break-words min-w-[250px]  max-w-[250px] whitespace-normal">
+              <TableCell className="break-words max-w-[200px] sm:max-w-[250px] whitespace-normal">
                 <Label
                   className={`${
                     todo.status === "Terminée"
@@ -98,13 +98,13 @@ const TaskList = () => {
                   onClick={() => router.push(`/update-tasks/${todo.id}`)}
                   className="bg-blue-500 hover:bg-blue-700"
                 >
-                  <Edit /> Edit
+                  <Edit /> <span className="hidden sm:block">Edit</span>
                 </Button>
                 <Button
                   onClick={() => router.push(`/delete-tasks/${todo.id}`)}
                   className="bg-red-500 hover:bg-red-700"
                 >
-                  <Delete /> Delete
+                  <Delete /> <span className="hidden sm:block">Delete</span>
                 </Button>
               </TableCell>
             </TableRow>

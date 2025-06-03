@@ -21,7 +21,7 @@ import { useRouter } from "next/navigation";
 export default function Home() {
   const router = useRouter();
   return (
-    <main className="max-w-xl  absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+    <main className="max-w-xl absolute top-1/2 -translate-y-1/2 sm:top-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2">
       <Card className="text-center">
         <CardHeader>
           <CardTitle className="text-3xl font-bold">Tasks manager</CardTitle>
